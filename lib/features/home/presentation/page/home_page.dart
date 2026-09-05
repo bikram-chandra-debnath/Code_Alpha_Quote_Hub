@@ -4,6 +4,7 @@ import 'package:quote_hub/core/common/button/elevated_buttons.dart';
 import 'package:quote_hub/features/home/presentation/bloc/quote_page/page_bloc.dart';
 import 'package:quote_hub/features/home/presentation/bloc/quote_page/page_event.dart';
 import 'package:quote_hub/features/home/presentation/bloc/quote_page/page_state.dart';
+import 'package:quote_hub/features/home/presentation/widgets/home_appbar.dart';
 import 'package:quote_hub/features/home/presentation/widgets/quotes.dart';
 
 class HomePage extends StatelessWidget {
@@ -28,6 +29,7 @@ class HomePage extends StatelessWidget {
 
               // Quote
               Quotes(),
+              HomeAppBar(),
 
               // next Button
               Align(

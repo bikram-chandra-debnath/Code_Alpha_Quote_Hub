@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quote_hub/features/home/presentation/bloc/quote_page/page_bloc.dart';
 import 'package:quote_hub/features/home/presentation/bloc/quote_page/page_state.dart';
-import 'package:quote_hub/features/home/presentation/widgets/home_appbar.dart';
 import 'package:quote_hub/features/home/presentation/widgets/quote_card.dart';
 
 class Quotes extends StatefulWidget {
@@ -66,7 +65,7 @@ class _QuotesState extends State<Quotes> {
           ),
         ),
         // AppBar
-        HomeAppBar(),
+        
       ],
     );
   }
