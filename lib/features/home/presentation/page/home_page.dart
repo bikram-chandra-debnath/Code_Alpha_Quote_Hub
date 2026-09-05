@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:quote_hub/core/common/button/elevated_buttons.dart';
 import 'package:quote_hub/features/home/presentation/bloc/quote_page/page_bloc.dart';
-import 'package:quote_hub/features/home/presentation/bloc/quote_page/page_event.dart';
-import 'package:quote_hub/features/home/presentation/bloc/quote_page/page_state.dart';
 import 'package:quote_hub/features/home/presentation/widgets/home_appbar.dart';
+import 'package:quote_hub/features/home/presentation/widgets/new_quote_button.dart';
 import 'package:quote_hub/features/home/presentation/widgets/quotes.dart';
 
 class HomePage extends StatelessWidget {
@@ -31,42 +29,8 @@ class HomePage extends StatelessWidget {
               Quotes(),
               HomeAppBar(),
 
-              // next Button
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 24,
-                    vertical: 12,
-                  ),
-                  child: BlocBuilder<PageBloc, PageState>(
-                    builder: (context, state) {
-                      final isLastPage =
-                          state.currentPage == state.totalPage - 1;
-                      return AppElevatedButton(
-                        onPressed: () {
-                          if (!isLastPage) {
-                            context.read<PageBloc>().add(NextPagePressed());
-                          }
-                        },
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              isLastPage ? "Finished" : "Next",
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                              ),
-                            ),
-                            Icon(Icons.arrow_right, color: Colors.white),
-                          ],
-                        ),
-                      );
-                    },
-                  ),
-                ),
-              ),
+              // New Quote Button
+              NewQuote(),
             ],
           ),
         ),
