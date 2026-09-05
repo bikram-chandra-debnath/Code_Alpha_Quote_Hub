@@ -14,15 +14,14 @@ class HomePage extends StatelessWidget {
       create: (context) => PageBloc(),
       child: SafeArea(
         child: Scaffold(
+          backgroundColor: Colors.black,
           body: Stack(
             children: [
               Container(
                 height: MediaQuery.of(context).size.height,
                 width: double.maxFinite,
 
-                decoration: BoxDecoration(
-                  color: Colors.deepPurple.withValues(alpha: 0.2),
-                ),
+                decoration: BoxDecoration(),
               ),
 
               // Quote

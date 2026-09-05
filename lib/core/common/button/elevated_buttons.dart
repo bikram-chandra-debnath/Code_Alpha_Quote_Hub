@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class AppElevatedButton extends StatelessWidget {
@@ -8,12 +7,14 @@ class AppElevatedButton extends StatelessWidget {
     required this.child,
     this.backgrondColor = Colors.pinkAccent,
     this.padding = const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+    this.borderRadius = 10,
   });
 
   final VoidCallback onPressed;
   final Widget child;
   final Color backgrondColor;
   final EdgeInsetsGeometry padding;
+  final double borderRadius;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class AppElevatedButton extends StatelessWidget {
       child: Container(
         padding: padding,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(10)),
+          borderRadius: BorderRadius.all(Radius.circular(borderRadius)),
           color: backgrondColor,
         ),
         child: child,

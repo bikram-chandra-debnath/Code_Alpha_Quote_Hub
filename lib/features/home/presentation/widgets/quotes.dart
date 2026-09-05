@@ -59,13 +59,24 @@ class _QuotesState extends State<Quotes> {
                       "https://cdn.pixabay.com/photo/2022/10/12/07/53/youtube-background-7515934_1280.jpg",
                   quote:
                       'May you find the courage disapoint the people who expact you to be small',
+                  onProfilePressed: () {},
+                  onAuthorNamePressed: () {},
+                  onFollowPressed: () {},
+                  authorName: 'White House',
+                  totalLikes: '10k',
+                  totalComments: '300',
+                  totlaSaves: '78',
+                  totalShares: '55',
+                  onLikePressed: () {},
+                  onCommentPressed: () {},
+                  onSavePressed: () {},
+                  onSharePressed: () {},
                 ),
               ),
             ),
           ),
         ),
-        // AppBar
-        
+
       ],
     );
   }
