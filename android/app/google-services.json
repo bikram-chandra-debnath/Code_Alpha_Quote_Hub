@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "135350814202",
+    "project_id": "quote-hub-4faf3",
+    "storage_bucket": "quote-hub-4faf3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135350814202:android:490c9212c9a490ace29043",
+        "android_client_info": {
+          "package_name": "com.example.quote_hub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzmy4jzfZUWyhwd8FowANEK-1CKrijSQE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
