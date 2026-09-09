@@ -53,30 +53,17 @@ class _QuotesState extends State<Quotes> {
               children: .generate(
                 10,
                 (index) => PageCard(
-                  profileImage:
-                      "https://cdn.pixabay.com/photo/2016/09/28/08/28/art-1699977_1280.jpg",
                   backgroundImage:
                       "https://cdn.pixabay.com/photo/2022/10/12/07/53/youtube-background-7515934_1280.jpg",
                   quote:
                       'May you find the courage disapoint the people who expact you to be small',
-                  onProfilePressed: () {},
-                  onAuthorNamePressed: () {},
-                  onFollowPressed: () {},
-                  authorName: 'White House',
-                  totalLikes: '10k',
-                  totalComments: '300',
-                  totlaSaves: '78',
-                  totalShares: '55',
-                  onLikePressed: () {},
-                  onCommentPressed: () {},
-                  onSavePressed: () {},
-                  onSharePressed: () {},
+
+                  authorName: 'White House  $index',
                 ),
               ),
             ),
           ),
         ),
-
       ],
     );
   }

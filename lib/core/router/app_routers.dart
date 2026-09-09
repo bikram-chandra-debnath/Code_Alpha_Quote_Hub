@@ -11,10 +11,6 @@ final routes = GoRouter(
       name: RouteName.homePage,
       builder: (context, state) => HomePage(),
     ),
-    GoRoute(
-      path: RoutePath.profilePage,
-      name: RouteName.profilePage,
-      builder: (context, state) => HomePage(),
-    ),
+   
   ],
 );

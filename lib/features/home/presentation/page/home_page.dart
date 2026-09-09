@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quote_hub/features/home/presentation/bloc/quote_page/page_bloc.dart';
-import 'package:quote_hub/features/home/presentation/widgets/home_appbar.dart';
 import 'package:quote_hub/features/home/presentation/widgets/new_quote_button.dart';
 import 'package:quote_hub/features/home/presentation/widgets/quotes.dart';
 
@@ -24,11 +23,7 @@ class HomePage extends StatelessWidget {
                 decoration: BoxDecoration(),
               ),
 
-              // Quote
               Quotes(),
-              HomeAppBar(),
-
-              // New Quote Button
               NewQuote(),
             ],
           ),
