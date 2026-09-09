@@ -10,3 +10,8 @@ abstract class PageEvent extends Equatable {
 class NextPagePressed extends PageEvent {
   const NextPagePressed();
 }
+
+class OnScrollEvent extends PageEvent {
+  final int index;
+  const OnScrollEvent({required this.index});
+}

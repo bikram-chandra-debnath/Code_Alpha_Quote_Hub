@@ -1,6 +1,9 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:quote_hub/core/router/route_name.dart';
 import 'package:quote_hub/core/router/route_path.dart';
+import 'package:quote_hub/features/home/presentation/bloc/quote_page/page_bloc.dart';
+import 'package:quote_hub/features/home/presentation/bloc/quotes/quotes_bloc.dart';
 import 'package:quote_hub/features/home/presentation/page/home_page.dart';
 
 final routes = GoRouter(
@@ -9,8 +12,13 @@ final routes = GoRouter(
     GoRoute(
       path: RoutePath.homePage,
       name: RouteName.homePage,
-      builder: (context, state) => HomePage(),
+      builder: (context, state) => MultiBlocProvider(
+        providers: [
+          BlocProvider(create: (context) => PageBloc()),
+          BlocProvider(create: (context) => QuoteBloc()),
+        ],
+        child: HomePage(),
+      ),
     ),
-   
   ],
 );

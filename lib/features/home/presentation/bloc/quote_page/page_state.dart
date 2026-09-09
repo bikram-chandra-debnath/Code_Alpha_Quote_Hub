@@ -2,17 +2,13 @@ import 'package:equatable/equatable.dart';
 
 class PageState extends Equatable {
   final int currentPage;
-  final int totalPage;
 
-  const PageState({this.currentPage = 0, this.totalPage = 10});
+  const PageState({this.currentPage = 0});
 
-  PageState copyWith({int? currentPage, int? totalPage}) {
-    return PageState(
-      currentPage: currentPage ?? this.currentPage,
-      totalPage: totalPage ?? this.totalPage,
-    );
+  PageState copyWith({int? currentPage}) {
+    return PageState(currentPage: currentPage ?? this.currentPage);
   }
 
   @override
-  List<Object> get props => [currentPage, totalPage];
+  List<Object> get props => [currentPage];
 }
