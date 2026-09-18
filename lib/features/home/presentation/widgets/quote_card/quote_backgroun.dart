@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quote_hub/features/auth/presentation/page/splash_page.dart';
 
 class QuoteBackground extends StatelessWidget {
   const QuoteBackground({super.key, required this.backgroundImage});
@@ -26,7 +27,7 @@ class QuoteBackground extends StatelessWidget {
           debugPrint("Image Loading Error: $error");
 
           return Expanded(
-            child: Container(decoration: BoxDecoration(color: Colors.black)),
+            child: Center(child: AppLogo(logoColor: Colors.white)),
           );
         },
       ),
