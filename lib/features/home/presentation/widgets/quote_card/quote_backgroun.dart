@@ -11,7 +11,7 @@ class QuoteBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: AppDeviceHelper.getScreenHeight(context) * 0.8,
+      height: AppDeviceHelper.getScreenHeight(context) * 0.95,
       width: double.maxFinite,
       child: Image(
         image: NetworkImage(backgroundImage),
@@ -21,7 +21,9 @@ class QuoteBackground extends StatelessWidget {
             return child;
           } else {
             return Expanded(
-              child: Container(decoration: BoxDecoration(color:AppColors.black)),
+              child: Container(
+                decoration: BoxDecoration(color: AppColors.black),
+              ),
             );
           }
         },

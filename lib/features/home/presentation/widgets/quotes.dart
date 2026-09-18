@@ -74,8 +74,9 @@ class _QuotesState extends State<Quotes> {
                       children: List.generate(quotesList.length, (index) {
                         final currentQuote = quotesList[index];
                         return PageCard(
-                          backgroundImage:
-                              "https://cdn.pixabay.com/photo/2022/10/12/07/53/youtube-background-7515934_1280.jpg",
+                          backgroundImage: index % 2 == 0
+                              ? "https://cdn.pixabay.com/photo/2022/08/29/22/33/sunset-7419911_1280.jpg"
+                              : "https://cdn.pixabay.com/photo/2022/10/12/07/53/youtube-background-7515934_1280.jpg",
                           quote: currentQuote.text,
                           authorName: currentQuote.author,
                         );
