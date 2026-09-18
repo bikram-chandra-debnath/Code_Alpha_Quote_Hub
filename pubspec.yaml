@@ -46,12 +46,18 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
-  
+  flutter_launcher_icons: ^0.14.4 
   flutter_lints: ^6.0.0
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
+
+# Configure the icon settings
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logo/Quote_Hub.png"
+  remove_alpha_ios: true # Prevents App Store rejection due to alpha channels
+
+
 
 # The following section is specific to Flutter packages.
 flutter:
