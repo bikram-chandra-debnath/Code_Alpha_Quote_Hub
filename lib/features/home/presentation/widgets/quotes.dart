@@ -22,7 +22,6 @@ class _QuotesState extends State<Quotes> {
   void initState() {
     super.initState();
     _pageController = PageController(initialPage: 0);
-    context.read<QuoteBloc>().add(FetchQuotesEvent());
   }
 
   @override
@@ -51,16 +50,6 @@ class _QuotesState extends State<Quotes> {
             },
             child: BlocBuilder<QuoteBloc, QuoteState>(
               builder: (context, state) {
-                if (state is QuoteLoadingState) {
-                  return const Center(child: CircularProgressIndicator());
-                }
-
-                if (state is QuoteErrorState) {
-                  return Center(
-                    child: Text('Something went wrong: ${state.message}'),
-                  );
-                }
-
                 if (state is QuoteLoadedState) {
                   if (state.quotes.isEmpty) {
                     return const Center(child: Text('No quotes found.'));
@@ -74,7 +63,7 @@ class _QuotesState extends State<Quotes> {
                     },
                     child: PageView(
                       controller: _pageController,
-                      scrollDirection: Axis.horizontal,
+                      scrollDirection: Axis.vertical,
                       pageSnapping: true,
                       onPageChanged: (value) {
                         context.read<PageBloc>().add(

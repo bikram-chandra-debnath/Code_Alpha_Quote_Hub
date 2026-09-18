@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quote_hub/features/auth/presentation/page/splash_page.dart';
+import 'package:quote_hub/core/common/widgets/app_logo.dart';
 
 class QuoteBackground extends StatelessWidget {
   const QuoteBackground({super.key, required this.backgroundImage});
