@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:quote_hub/core/router/app_routers.dart';
+import 'package:quote_hub/core/utils/theme/theme.dart';
 import 'package:quote_hub/features/home/presentation/bloc/quotes/quotes_bloc.dart';
 import 'package:quote_hub/features/home/presentation/bloc/quotes/qutoes_event.dart';
 import 'package:quote_hub/firebase_options.dart';
@@ -25,6 +26,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       routerConfig: routes,
+      theme: AppTheme.lightTheme,
+      darkTheme: AppTheme.darkTheme,
+      themeMode: ThemeMode.system,
     );
   }
 }
