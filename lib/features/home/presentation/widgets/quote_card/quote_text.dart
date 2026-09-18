@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quote_hub/core/constants/colors.dart';
+import 'package:quote_hub/core/constants/sizes.dart';
 
 class QuoteText extends StatelessWidget {
   const QuoteText({super.key, required this.quote, required this.authorName});
@@ -8,7 +10,7 @@ class QuoteText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: Colors.black.withValues(alpha: 0.8)),
+      decoration: BoxDecoration(color: AppColors.black.withValues(alpha: 0.8)),
       child: Align(
         alignment: Alignment.center,
         child: Padding(
@@ -19,10 +21,13 @@ class QuoteText extends StatelessWidget {
               children: [
                 Text(
                   quote,
-                  style: TextStyle(fontSize: 35, color: Colors.white),
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                    fontSize: 35,
+                    color: Colors.white,
+                  ),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 48),
+                SizedBox(height: AppSizes.spaceBtwSections),
                 Align(
                   alignment: Alignment.bottomLeft,
                   child: RichText(
@@ -32,7 +37,7 @@ class QuoteText extends StatelessWidget {
                           text: "- ",
                           style: Theme.of(context).textTheme.titleLarge!
                               .copyWith(
-                                color: Colors.white,
+                                color: AppColors.white,
                                 fontWeight: FontWeight.w900,
                               ),
                         ),
@@ -40,7 +45,7 @@ class QuoteText extends StatelessWidget {
                           text: authorName,
                           style: Theme.of(context).textTheme.titleLarge!
                               .copyWith(
-                                color: Colors.pinkAccent.shade200,
+                                color: AppColors.textPrimary,
                                 fontWeight: FontWeight.w600,
                               ),
                         ),
@@ -48,7 +53,7 @@ class QuoteText extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 24),
+                SizedBox(height: AppSizes.spaceBtwItems * 2),
               ],
             ),
           ),

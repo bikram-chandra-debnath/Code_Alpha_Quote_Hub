@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:quote_hub/core/utils/helpers/device_helper.dart';
 import 'package:quote_hub/features/home/presentation/bloc/quotes/quotes_bloc.dart';
 import 'package:quote_hub/features/home/presentation/bloc/quotes/qutoes_event.dart';
 import 'package:quote_hub/features/home/presentation/widgets/new_quote_button.dart';
@@ -19,7 +20,7 @@ class HomePage extends StatelessWidget {
           child: Stack(
             children: [
               Container(
-                height: MediaQuery.of(context).size.height,
+                height: AppDeviceHelper.getAppBarHeight(),
                 width: double.maxFinite,
 
                 decoration: BoxDecoration(),

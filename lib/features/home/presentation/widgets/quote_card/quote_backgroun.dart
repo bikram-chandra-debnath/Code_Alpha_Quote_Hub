@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:quote_hub/core/common/widgets/app_logo.dart';
+import 'package:quote_hub/core/constants/colors.dart';
+import 'package:quote_hub/core/utils/helpers/device_helper.dart';
 
 class QuoteBackground extends StatelessWidget {
   const QuoteBackground({super.key, required this.backgroundImage});
@@ -9,7 +11,7 @@ class QuoteBackground extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.8,
+      height: AppDeviceHelper.getScreenHeight(context) * 0.8,
       width: double.maxFinite,
       child: Image(
         image: NetworkImage(backgroundImage),
@@ -19,7 +21,7 @@ class QuoteBackground extends StatelessWidget {
             return child;
           } else {
             return Expanded(
-              child: Container(decoration: BoxDecoration(color: Colors.black)),
+              child: Container(decoration: BoxDecoration(color:AppColors.black)),
             );
           }
         },
